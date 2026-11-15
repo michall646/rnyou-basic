@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Build & pack artifacts (dist/ is tracked so GitHub installs work directly)
+*.tgz
+*.tsbuildinfo
+
+# Logs & OS files
+*.log
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+.DS_Store
+
+# Local & Expo caches
+.expo/
+.tmp/
+.env*.local

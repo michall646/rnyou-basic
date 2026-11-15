@@ -1,0 +1,33 @@
+import { PressableProps, StyleProp, TextStyle, ViewStyle } from "react-native";
+import type { TypographyVariant } from "../theme/types/theme";
+import type { FontWeight } from "../theme/types/typography";
+import type { ButtonStyleVariant } from "../theme/buttonStyles";
+import type { IconName } from "../../types/icons";
+export type MaterialIconName = IconName;
+
+export interface ButtonProps extends Omit<PressableProps, "style" | "onPress"> {
+  label?: string;
+  children?: React.ReactNode;
+  leftIcon?: MaterialIconName;
+  rightIcon?: MaterialIconName;
+  isLoading?: boolean;
+  isDisabled?: boolean;
+  isActive?: boolean;
+  variant?: ButtonStyleVariant;
+  size?: "xSmall" | "small" | "medium" | "large" | "xLarge";
+  toggle?: boolean;
+  showCheckmark?: boolean;
+  shape?: "round" | "square";
+  fullWidth?: boolean;
+  expandOnPress?: boolean;
+  value?: string;
+  flex?: number;
+  isGrouped?: boolean;
+  labelVariant?: TypographyVariant;
+  labelFamily?: string;
+  labelWeight?: FontWeight;
+  onPress?: (isActive?: boolean) => void;
+  style?: StyleProp<ViewStyle>;
+  contentStyle?: StyleProp<ViewStyle>;
+  labelStyle?: StyleProp<TextStyle>;
+}

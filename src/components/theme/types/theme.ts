@@ -1,0 +1,49 @@
+export { TypographyVariant, type TypographyScale } from './typography';
+export type ThemeMode = 'light' | 'dark' | 'system';
+
+export interface MaterialColors {
+  primary: string;
+  onPrimary: string;
+  primaryContainer: string;
+  onPrimaryContainer: string;
+
+  secondary: string;
+  onSecondary: string;
+  secondaryContainer: string;
+  onSecondaryContainer: string;
+
+  tertiary: string;
+  onTertiary: string;
+  tertiaryContainer: string;
+  onTertiaryContainer: string;
+
+  error: string;
+  onError: string;
+  errorContainer: string;
+  onErrorContainer: string;
+
+  background: string;
+  onBackground: string;
+  surface: string;
+  onSurface: string;
+  surfaceVariant: string;
+  onSurfaceVariant: string;
+
+  surfaceContainerLowest: string;
+  surfaceContainerLow: string;
+  surfaceContainer: string;
+  surfaceContainerHigh: string;
+  surfaceContainerHighest: string;
+
+  outline: string;
+  outlineVariant: string;
+  shadow: string;
+  scrim: string;
+  inverseSurface: string;
+  inverseOnSurface: string;
+  inversePrimary: string;
+
+  /** Arbitrary app-specific color tokens (e.g. brand, success, warning, info).
+   *  Access via `colors.extras?.brand`. Use optional chaining as this may be undefined. */
+  extras?: Record<string, string>;
+}

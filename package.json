@@ -1,0 +1,77 @@
+{
+  "name": "rnyou-basic",
+  "version": "0.1.11",
+  "description": "Free MIT core of RNYou — Material You (Material 3) components and dynamic theming for React Native & Expo",
+  "main": "./dist/index.js",
+  "react-native": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "react-native": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "UPGRADING.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michall646/rnyou-basic.git"
+  },
+  "homepage": "https://github.com/michall646/rnyou-basic#readme",
+  "bugs": {
+    "url": "https://github.com/michall646/rnyou-basic/issues"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "material-you",
+    "material-3",
+    "m3",
+    "ui",
+    "components",
+    "reanimated",
+    "dynamic-color",
+    "theming"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@expo-google-fonts/google-sans-flex": "^0.4.3",
+    "@expo-google-fonts/roboto-flex": "^0.4.1",
+    "@material/material-color-utilities": "^0.4.0"
+  },
+  "peerDependencies": {
+    "@expo/vector-icons": ">=14.0.0",
+    "@pchmn/expo-material3-theme": ">=1.4.0",
+    "expo-font": ">=12.0.0",
+    "expo-system-ui": ">=3.0.0",
+    "react": ">=18.2.0",
+    "react-native": ">=0.73.0",
+    "react-native-reanimated": ">=3.10.0"
+  },
+  "devDependencies": {
+    "@expo/vector-icons": "^15.1.1",
+    "@pchmn/expo-material3-theme": "^1.4.0",
+    "@types/node": "^20.11.0",
+    "@types/react": "~19.2.2",
+    "expo-font": "~56.0.7",
+    "expo-system-ui": "~56.0.5",
+    "react": "19.2.3",
+    "react-native": "0.85.3",
+    "react-native-reanimated": "4.3.1",
+    "react-native-worklets": "0.8.3",
+    "typescript": "~6.0.3"
+  }
+}
