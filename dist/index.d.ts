@@ -6,6 +6,8 @@ export { default as Chip } from "./components/chip/Chip";
 export { default as ChipGroup } from "./components/chip/ChipGroup";
 export * from "./components/chip/Chip.types";
 export { default as Switch } from "./components/switch/Switch";
+export { default as Slider } from "./components/slider/slider";
+export * from "./components/slider/slider.types";
 export { default as Text, AnimatedText } from "./components/text/Text";
 export type { IconName, IconProp } from "./types/icons";
 export { MaterialThemeProvider, useMaterialColors, useMaterialTheme, } from "./components/theme/m3ThemeProvider";

@@ -4,7 +4,7 @@ Free, MIT-licensed core of **RNYou** — Google's **Material You (Material 3)** 
 
 ## What's Included
 
-* **Core Components:** `Button`, `Checkbox`, `Chip`, `ChipGroup`, `Switch`, `Text`, `AnimatedText`
+* **Core Components:** `Button`, `Checkbox`, `Chip`, `ChipGroup`, `Slider`, `Switch`, `Text`, `AnimatedText`
 * **Dynamic Theme Engine:** `MaterialThemeProvider`, `useMaterialColors`, `useMaterialTheme`
 * **Color Utilities:** `generateThemeFromColor`, `generateThemeFromImage`, `generateThemeFromPixels`, `lightenColor`, `darkenColor`
 * **Typography Presets:** `googleSansFlexPreset`, `robotoFlexPreset`, `useFontLoader`
@@ -24,7 +24,7 @@ npm install github:michall646/rnyou-basic
 Install peer dependencies in your Expo project:
 
 ```bash
-npx expo install react-native-reanimated react-native-worklets @expo/vector-icons expo-font expo-system-ui @pchmn/expo-material3-theme
+npx expo install react-native-reanimated react-native-worklets react-native-gesture-handler expo-haptics @expo/vector-icons expo-font expo-system-ui @pchmn/expo-material3-theme
 ```
 
 Add the Reanimated worklets plugin **last** in `babel.config.js`:
@@ -40,27 +40,30 @@ module.exports = {
 
 ## Quick Start
 
-Wrap your root component with `MaterialThemeProvider`:
+Wrap your root component with `GestureHandlerRootView` and `MaterialThemeProvider`:
 
 ```tsx
 import { useState } from 'react';
 import { View } from 'react-native';
-import { MaterialThemeProvider, Button, Switch, Chip, Text } from 'rnyou-basic';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { MaterialThemeProvider, Button, Switch, Chip, Slider, Text } from 'rnyou-basic';
 
 export default function App() {
   const [enabled, setEnabled] = useState(true);
+  const [value, setValue] = useState(0.5);
 
   return (
-    <MaterialThemeProvider fontPreset="googleSansFlex">
-      <View style={{ flex: 1, justifyContent: 'center', padding: 24, gap: 16 }}>
-        <Text variant="headlineMedium">Hello Material You</Text>
-        <Chip label="Dynamic Theme" variant="assist" onPress={() => {}} />
-        <Switch value={enabled} onChange={setEnabled} />
-        <Button variant="filled" onPress={() => {}}>
-          Get Started
-        </Button>
-      </View>
-    </MaterialThemeProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <MaterialThemeProvider fontPreset="googleSansFlex">
+        <View style={{ flex: 1, justifyContent: 'center', padding: 24, gap: 16 }}>
+          <Text variant="headlineMedium">Hello Material You</Text>
+          <Chip label="Dynamic Theme" variant="assist" onPress={() => {}} />
+          <Slider value={value} width={260} onValueChange={setValue} />
+          <Switch value={enabled} onChange={setEnabled} />
+          <Button variant="filled" label="Get Started" onPress={() => {}} />
+        </View>
+      </MaterialThemeProvider>
+    </GestureHandlerRootView>
   );
 }
 ```
@@ -73,7 +76,7 @@ export default function App() {
 
 | Feature | Basic (Free · MIT) | UI Library (\$15 one-time) | Template + CLI (\$25 one-time) |
 |---|---|---|---|
-| Core (`Button`, `Chip`, `Switch`, `Checkbox`, `Text`) | ✅ | ✅ | ✅ |
+| Core (`Button`, `Chip`, `Switch`, `Checkbox`, `Slider`, `Text`) | ✅ | ✅ | ✅ |
 | Dynamic `MaterialThemeProvider` & Typography | ✅ | ✅ | ✅ |
 | All 36 Material 3 Components (Sheets, Dialogs, Sliders, Rails, etc.) | — | ✅ | ✅ |
 | Expo Router Navigation & Haptics | — | ✅ | ✅ |

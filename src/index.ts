@@ -21,7 +21,11 @@ export * from "./components/chip/Chip.types";
 // 4. Switch
 export { default as Switch } from "./components/switch/Switch";
 
-// 5. Typography (consumed internally by Button & Chip)
+// 5. Slider
+export { default as Slider } from "./components/slider/slider";
+export * from "./components/slider/slider.types";
+
+// 6. Typography (consumed internally by Button & Chip)
 export { default as Text, AnimatedText } from "./components/text/Text";
 
 // Icon types (canonical exports)

@@ -23,7 +23,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.generateThemeFromImage = exports.generateThemeFromPixels = exports.generateThemeFromColor = exports.darkenColor = exports.lightenColor = exports.useFontLoader = exports.presets = exports.googleSansFlexPreset = exports.robotoFlexPreset = exports.lightFallbackColors = exports.darkFallbackColors = exports.useMaterialTheme = exports.useMaterialColors = exports.MaterialThemeProvider = exports.AnimatedText = exports.Text = exports.Switch = exports.ChipGroup = exports.Chip = exports.Checkbox = exports.Button = void 0;
+exports.generateThemeFromImage = exports.generateThemeFromPixels = exports.generateThemeFromColor = exports.darkenColor = exports.lightenColor = exports.useFontLoader = exports.presets = exports.googleSansFlexPreset = exports.robotoFlexPreset = exports.lightFallbackColors = exports.darkFallbackColors = exports.useMaterialTheme = exports.useMaterialColors = exports.MaterialThemeProvider = exports.AnimatedText = exports.Text = exports.Slider = exports.Switch = exports.ChipGroup = exports.Chip = exports.Checkbox = exports.Button = void 0;
 // 1. Button
 var Button_1 = require("./components/button/Button");
 Object.defineProperty(exports, "Button", { enumerable: true, get: function () { return __importDefault(Button_1).default; } });
@@ -40,7 +40,11 @@ __exportStar(require("./components/chip/Chip.types"), exports);
 // 4. Switch
 var Switch_1 = require("./components/switch/Switch");
 Object.defineProperty(exports, "Switch", { enumerable: true, get: function () { return __importDefault(Switch_1).default; } });
-// 5. Typography (consumed internally by Button & Chip)
+// 5. Slider
+var slider_1 = require("./components/slider/slider");
+Object.defineProperty(exports, "Slider", { enumerable: true, get: function () { return __importDefault(slider_1).default; } });
+__exportStar(require("./components/slider/slider.types"), exports);
+// 6. Typography (consumed internally by Button & Chip)
 var Text_1 = require("./components/text/Text");
 Object.defineProperty(exports, "Text", { enumerable: true, get: function () { return __importDefault(Text_1).default; } });
 Object.defineProperty(exports, "AnimatedText", { enumerable: true, get: function () { return Text_1.AnimatedText; } });
